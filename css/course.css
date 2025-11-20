@@ -1,0 +1,172 @@
+section {
+    padding: 48px 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.hero-section {
+    padding: 40px 0;
+    border-top: 1px solid #ffffff3d;
+    border-bottom: 1px solid #ffffff3d;
+}
+
+.hero-section .container {
+    padding-top: 60px;
+    max-width: 1200px;
+    width: 95%;
+    .big-text {
+        color: white;
+        font-weight: 700;
+        font-size: 40px;
+    }
+    .small-text {
+        color: white;
+        font-weight: 400;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    background-color: #1a1e26;
+    border: 1px solid #3a3a3a;
+    border-radius: 4px;
+    padding: 8px 12px;
+    width: 300px;
+    margin: 10px 0 0 0;
+    color: #ccc;
+}
+
+.search-container i {
+    color: #aaa;
+    margin-right: 8px;
+}
+
+.search-container input {
+    background: #1a1e26;
+    border: none;
+    outline: none;
+    color: #eee;
+    font-size: 15px;
+    width: 100%;
+}
+
+.search-container input::placeholder {
+    color: #888;
+}
+
+.main-section {
+    padding: 20px 0 20px 0;
+}
+
+.main-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .top {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .aim-icon {
+            width: 20px;
+            height: 20px;
+            object-fit: cover;
+        }
+    }
+    .bottom {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        .box {
+            padding: 10px;
+            background-color: #303541;
+            color: #ffffff;
+            font-weight: 400;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+    }
+}
+
+.section2 {
+    padding-top: 0;
+    .container {
+        gap: 32px;
+    }
+    .card {
+        width: calc((100% - 45px * 2) / 3);
+        height: 244px;
+        padding: 10px;
+
+        .image {
+            border-radius: 10px;
+            --image: url("/");
+            background-image: var(--image);
+            flex: 1;
+            background-color: var(--blue-dark2);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            transition: 0.25s;
+            cursor: pointer;
+        }
+        .image:hover {
+            background-size: 110%;
+        }
+        .HTML {
+            --image: url(/assets/course/html&css.jpg);
+        }
+        .JS {
+            --image: url(/assets/course/javascript.jpg);
+        }
+        .Design {
+            --image: url(/assets/course/design.jpg);
+        }
+        .C {
+            --image: url(/assets/course/c.png);
+        }
+        .Kotlin {
+            --image: url(/assets/course/kotlin.png);
+        }
+    }
+    @media only screen and (max-width: 1024px) {
+        .card {
+            width: calc((100% - 45px * 1) / 2);
+        }
+    }
+    @media only screen and (max-width: 660px) {
+        .card {
+            width: calc((100% - 10px * 1) / 2);
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .hero-section {
+        .container {
+            .big-text {
+                font-size: 30px;
+            }
+            .small-text {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .hero-section {
+        .container {
+            .big-text {
+                font-size: 24px;
+            }
+            .small-text {
+                font-size: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/quiz2.css">
+    <link rel="stylesheet" href="/css/utils.css">
+</head>
+<body>
+    <header class="flex-r a-center j-center bg-blue-dark2">
+        <div class="flex-r g40 container j-between">
+            <div class="flex-r g15">
+                <img src="/assets/icon/hamburger.svg" class="Tablet Mobile"> 
+                <div class="logo a-center">
+                </div>
+            </div>
+            <menu class="flex-r a-center PC">
+                <button class="item" onclick="window.location.assign('/index.html')">
+                    <span lang="vi">
+                        Trang chủ
+                    </span>
+                    <span lang="en">
+                        Home
+                    </span>
+                </button>
+                <button class="item" onclick="window.location.assign('/course.html')">
+                    <span lang="vi">
+                        Khóa học
+                    </span>
+                    <span lang="en">
+                        Courses
+                    </span>
+                </button>
+                <button class="item active" onclick="window.location.assign('/intro.html')">
+                    <span lang="vi">
+                        Giới thiệu
+                    </span>
+                    <span lang="en">
+                        Introduction
+                    </span>
+                </button>
+                <button class="item" onclick="window.location.assign('/contact.html')">
+                    <span lang="vi">
+                        Liên hệ
+                    </span>
+                    <span lang="en">
+                        Contact us
+                    </span>
+                </button>
+            </menu>
+            <div class="utils a-center">
+                <button class="tertiary dropdown" onclick="changeLanuage()">
+                    <img src="./assets/icon/global.svg">
+                    <span id="lang">
+                        EN
+                    </span>
+                </button>
+                <button class="secondary">
+                    <span lang="vi">
+                        Đăng ký
+                    </span>
+                    <span lang="en">
+                        Sign Up
+                    </span>
+                </button>
+                <button class="primary">
+                    <span lang="vi">
+                        Đăng nhập
+                    </span>
+                    <span lang="en">
+                        Sign In
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <section class="quiz">
+        <div class="container flex-c g10">
+            <div class="f25 w5">
+                <span lang="en">
+                    Quiz Progress
+                </span>
+                <span lang="vi">
+                    Tiến độ trắc nghiệm
+                </span>
+            </div>
+            <div class="progressbar">
+                <div class="progress">
+
+                </div>
+            </div>
+            <div class="f15 flex-r c-w50">
+                <span lang="en">Completed</span>&nbsp;
+                <span lang="vi">Hoàn thành</span>&nbsp;
+                <span class="c-w50 progress-info"> 0/8</span>
+            </div>
+        </div>
+    </section>
+    <section class="choices">
+        <div class="container">
+            <div class="question f30 w7 text-center">
+                Bạn thích làm việc với thứ nào hơn?
+            </div>
+            <div class="flex-r t-flex-c t-j-left g10">
+                <button class="card" onclick="setActive(1)">
+                    Máy tính, trình duyệt
+                </button>
+                <button class="card" onclick="setActive(2)">
+                    Điện thoại, ứng dụng
+                </button>
+                <button class="card" onclick="setActive(3)">
+                    Hình ảnh, màu sắc, bố cục
+                </button>
+            </div>
+            <div class="flex-r g10 j-center">
+                <button class="primary disabled" onclick="updateQuestion('previous')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="flip">
+                        <path class="arrow-right"/>
+                    </svg>
+                    <span lang="en">
+                        Previous
+                    </span>
+                    <span lang="vi">
+                        Trước
+                    </span>
+                </button>
+                <button class="primary disabled"  onclick="updateQuestion('next')">
+                    <span lang="en">
+                        Next
+                    </span>
+                    <span lang="vi">
+                        Sau
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path class="arrow-right"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-blue-dark2">
+        <div class="container flex-r t-flex-c j-between g40">
+            <div class="section">
+                <div class="logo">
+
+                </div>
+                <div class="line-140">
+                    <span lang="vi">
+                        &copy; 2025 BCNStudying.<br>Mọi quyền được bảo lưu
+                    </span>
+                    <span lang="en">
+                        &copy; 2025 BCNStudying.<br>All Right Reserved
+                    </span>
+                </div>
+            </div>
+            <div class="flex-r m-flex-c g40">
+                <div class="section flex-c g20">
+                    <div class="type">
+                        <span lang="vi">
+                            Tài nguyên
+                        </span>
+                        <span lang="en">
+                            Resources
+                        </span>  
+                    </div>
+                    <div class="links flex-c g5">
+                        <a href="#">
+                            <span lang="vi">
+                                Câu hỏi thường gặp
+                            </span>
+                            <span lang="en">
+                                FAQ
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span lang="vi">
+                                Chính sách và Điều khoản
+                            </span>
+                            <span lang="en">
+                                Term of Serivce
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span lang="vi">
+                                Chính sách bảo mật
+                            </span>
+                            <span lang="en">
+                                Privacy Policy
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="section flex-c g20">
+                    <div class="type">
+                        <span lang="vi">
+                            Thông tin liên hệ
+                        </span>
+                        <span lang="en">
+                            Contact Information
+                        </span>  
+                    </div>
+                    <div class="links flex-c g5">
+                        <div>
+                            Email: BCNStudy@Night.service
+                        </div>
+                        <div>
+                            <span lang="vi">
+                                Địa chỉ: 314/20 Quận Ruins, Wonderland, Thực tại #1024A
+                            </span>
+                            <span lang="en">
+                                Address: 314/20 Ruins District, Wonderland, Reality #1024A
+                            </span>
+                        </div>
+                        <div>
+                            <span lang="vi">
+                                Số điện thoại: 0447859496
+                            </span>
+                            <span lang="en">
+                                Phone Number: 0447859496
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"
+></script>
+<script src="/index.js"></script>
+<script src="/quiz2.js"></script>
+</html>

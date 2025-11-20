@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/css/roadmap.css" />
+        <link rel="stylesheet" href="/css/utils.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="flex-r a-center j-center bg-blue-dark2">
+            <div class="flex-r g40 container j-between">
+                <div class="flex-r g15">
+                    <img src="/assets/icon/hamburger.svg" class="Tablet Mobile"> 
+                    <div class="logo a-center">
+                    </div>
+                </div>
+                <menu class="flex-r a-center PC">
+                    <button class="item active" onclick="window.location.assign('/index.html')">
+                        <span lang="vi">
+                            Trang chủ
+                        </span>
+                        <span lang="en">
+                            Home
+                        </span>
+                    </button>
+                    <button class="item" onclick="window.location.assign('/course.html')">
+                        <span lang="vi">
+                            Khóa học
+                        </span>
+                        <span lang="en">
+                            Courses
+                        </span>
+                    </button>
+                    <button class="item" onclick="window.location.assign('/intro.html')">
+                        <span lang="vi">
+                            Giới thiệu
+                        </span>
+                        <span lang="en">
+                            Introduction
+                        </span>
+                    </button>
+                    <button class="item" onclick="window.location.assign('/contact.html')">
+                        <span lang="vi">
+                            Liên hệ
+                        </span>
+                        <span lang="en">
+                            Contact us
+                        </span>
+                    </button>
+                </menu>
+                <div class="utils a-center">
+                    <button class="tertiary dropdown" onclick="changeLanuage()">
+                        <img src="./assets/icon/global.svg">
+                        <span id="lang">
+                            EN
+                        </span>
+                    </button>
+                    <button class="secondary">
+                        <span lang="vi">
+                            Đăng ký
+                        </span>
+                        <span lang="en">
+                            Sign Up
+                        </span>
+                    </button>
+                    <button class="primary">
+                        <span lang="vi">
+                            Đăng nhập
+                        </span>
+                        <span lang="en">
+                            Sign In
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- <header></header> -->
+
+        <!-- Information  -->
+        <section class="section1">
+            <div class="container">
+                <div class="g10 flex-c">
+                    <div class="button a-center j-left">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 22 22"
+                            fill="none"
+                            class="flip"
+                        >
+                            <path class="arrow-right" />
+                        </svg>
+                        <div class="f18 m-f16">
+                            <span lang="en">Return</span>
+                            <span lang="vi">Quay lại</span>
+                        </div>
+                    </div>
+                    <div class="f40 w7 t-f28 m-j-center m-f26">
+                        <span lang="en">Web Developer</span>
+                        <span lang="vi">Lập trình viên web</span>
+                    </div>
+                    <div class="f20 t-f14 m-f16 m-letter1">
+                        <span lang="en">
+                            Become proficient at devloping mordern websites with HTML, CSS, JS and Reacts. And how to build
+                            responsive website, optimized efficiency and user experience 
+                        </span>
+                        <span lang="vi">
+                            Trở thành chuyên gia phát triển giao diện web hiện
+                            đại với HTML, CSS, JavaScript và React. Học cách xây
+                            dựng ứng dụng web responsive, tối ưu hiệu suất và
+                            trải nghiệm người dùng.
+                        </span>
+                    </div>
+                    <div class="info-bar m-j-center m-flex-wrap">
+                        <div class="a-center j-center g5">
+                            <img src="/assets/icon/time.svg" />
+                            <div class="f16">
+                                <span lang="en"> 4 to 6 months </span>
+                                <span lang="vi"> 4 - 6 tháng </span>
+                            </div>
+                        </div>
+                        <div class="a-center j-center g5">
+                            <img src="/assets/icon/level.svg" class="item" />
+                            <div class="f16">
+                                <span lang="en"> Newbie to Proficient </span>
+                                <span lang="vi"> Cơ bản đến Nâng cao </span>
+                            </div>
+                        </div>
+                        <div class="a-center j-center g5">
+                            <img src="/assets/icon/circle.svg" class="item" />
+                            <div class="f16">
+                                <span lang="en"> 6 courses </span>
+                                <span lang="vi"> 6 khóa học </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Learning pathway -->
+        <section class="section2">
+            <div class="container j-between flex-r t-flex-wrap g20">
+                <div class="box_big flex-c g17">
+                    <div class="f32 w7 t-f26 m-a-center m-f22">
+                        <span lang="en"> Study Roadmap </span>
+                        <span lang="vi"> Lộ Trình Học Tập </span>
+                    </div>
+                    <!-- Choose Learning pathway -->
+                    <div class="flex-c g14">
+                        <!-- choose learning pathway -->
+                        <div class="PC Tablet Mobile g11 wrap a-start" id="demo">
+                            <div class="flex-c g8">
+                                <div class="f28 w7 t-f24 m-f21">
+                                    <span lang="en">
+                                        Choose roadmap to Start
+                                    </span>
+                                    <span lang="vi">
+                                        Chọn lộ trình để bắt đầu
+                                    </span>
+                                </div>
+                                <div class="f17 t-f15">
+                                    <span lang="en">
+                                        Choose this roadmap and unlock all of its courses and track your study progress.
+                                    </span>
+                                    <span lang="vi">
+                                        Chọn lộ trình này để mở khóa tất cả các
+                                        khóa học và theo dõi tiến độ học tập của
+                                        bạn.
+                                    </span>
+                                </div>
+                                <button
+                                    class="w5 primary"
+                                    id="primary"
+                                    onclick="openOverlay()"
+                                >
+                                    <span lang="en"> Choose this roadmap </span>
+                                    <span lang="vi"> Chọn lộ trình này </span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Lesson--1 -->
+                        <div class="PC Tablet Mobile">
+                            <div class="flex-c wrap_small a-center lock-container">
+                                <div class="lock">
+
+                                </div>
+                                <svg height="200" width="50" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="50%" y1="0" x2="50%" y2="125" class="line"></line>
+                                </svg>
+                            </div>
+                            <div class="wrap_big flex-c j-between">
+                                <div class=" flex-r a-center j-between">
+                                    <div class="f24 w7 t-f20">
+                                        <span lang="en">Fundamental Github, git, vercel</span>
+                                        <span lang="vi">Github, git, vercel Cơ bản</span>
+                                    </div>
+                                    <button class="tertiary" onclick="skip()">
+                                        <span lang="en">
+                                            Skip
+                                        </span>
+                                        <span lang="vi">
+                                            Bỏ qua phần này
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="f20">
+                                    <span lang="en">
+                                        Learn the foundation of git, Github and Vercel to work in a team enviroment
+                                    </span>
+                                    <span lang="vi">
+                                        Học git, Github, Vercel cơ bản để làm việc trong môi trường động đội
+                                    </span>
+                                </div>
+                                <div class="f15 flex-r g10">
+                                    <div>
+                                        <span lang="en">
+                                            <b>Duration:</b> 2 days
+                                        </span>
+                                        <span lang="vi">
+                                            <b>Thời gian học:</b> 2 ngày
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span lang="en">
+                                            <b>Level:</b> Beginner
+                                        </span>
+                                        <span lang="vi">
+                                            <b>Mức độ:</b> Cơ bản
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="PC Tablet Mobile">
+                            <div class="flex-c wrap_small a-center lock-container">
+                                <div class="lock">
+
+                                </div>
+                                <svg height="200" width="50" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="50%" y1="0" x2="50%" y2="125" class="line"></line>
+                                </svg>
+                            </div>
+                            <div class="wrap_big flex-c j-between">
+                                <div class="f24 w7 t-f20">
+                                    <span lang="en">Fundamental HTML & CSS</span>
+                                    <span lang="vi">HTML & CSS Cơ bản</span>
+                                </div>
+                                <div class="f20">
+                                    <span lang="en">
+                                        Build the foundation of website with HTML & CSS
+                                    </span>
+                                    <span lang="vi"
+                                        >Nền tảng xây dựng giao diện web với
+                                        HTML và CSS</span
+                                    >
+                                </div>
+                                <div class="f15 flex-r g10">
+                                    <div>
+                                        <span lang="en">
+                                            <b>Duration:</b> 2 days
+                                        </span>
+                                        <span lang="vi">
+                                            <b>Thời gian học:</b> 2 ngày
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span lang="en">
+                                            <b>Level:</b> Beginner
+                                        </span>
+                                        <span lang="vi">
+                                            <b>Mức độ:</b> Cơ bản
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="PC Tablet Mobile">
+                            <div class="flex-c wrap_small a-center lock-container">
+                                <div class="lock">
+
+                                </div>
+                                <svg height="200" width="50" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="50%" y1="0" x2="50%" y2="125" class="line"></line>
+                                </svg>
+                            </div>
+                            <div class="wrap_big flex-c j-between">
+                                <div class="f24 w7 t-f20">
+                                    <span lang="en">Fundamental HTML & CSS</span>
+                                    <span lang="vi">HTML & CSS Cơ bản</span>
+                                </div>
+                                <div class="f20">
+                                    <span lang="en">
+                                        Build the foundation of website with HTML & CSS
+                                    </span>
+                                    <span lang="vi"
+                                        >Nền tảng xây dựng giao diện web với
+                                        HTML và CSS</span
+                                    >
+                                </div>
+                                <div class="f15 flex-r g10">
+                                    <div>
+                                        <span lang="en">
+                                            <b>Duration:</b> 2 days
+                                        </span>
+                                        <span lang="vi">
+                                            <b>Thời gian học:</b> 2 ngày
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span lang="en">
+                                            <b>Level:</b> Beginner
+                                        </span>
+                                        <span lang="vi">
+                                            <b>Mức độ:</b> Cơ bản
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="PC Tablet Mobile">
+                            <div class="flex-c wrap_small a-center lock-container">
+                                <div class="lock">
+
+                                </div>
+                                <svg height="200" width="50" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="50%" y1="0" x2="50%" y2="125" class="line"></line>
+                                </svg>
+                            </div>
+                            <div class="wrap_big flex-c j-between">
+                                <div class="f24 w7 t-f20">
+                                    <span lang="en">Fundamental HTML & CSS</span>
+                                    <span lang="vi">HTML & CSS Cơ bản</span>
+                                </div>
+                                <div class="f20">
+                                    <span lang="en">
+                                        Build the foundation of website with HTML & CSS
+                                    </span>
+                                    <span lang="vi"
+                                        >Nền tảng xây dựng giao diện web với
+                                        HTML và CSS</span
+                                    >
+                                </div>
+                                <div class="f15 flex-r g10">
+                                    <div>
+                                        <span lang="en">
+                                            <b>Duration:</b> 2 days
+                                        </span>
+                                        <span lang="vi">
+                                            <b>Thời gian học:</b> 2 ngày
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span lang="en">
+                                            <b>Level:</b> Beginner
+                                        </span>
+                                        <span lang="vi">
+                                            <b>Mức độ:</b> Cơ bản
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="PC Tablet Mobile">
+                            <div class="flex-c wrap_small a-center lock-container">
+                                <div class="lock">
+
+                                </div>
+                                <svg height="200" width="50" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="50%" y1="0" x2="50%" y2="125" class="line"></line>
+                                </svg>
+                            </div>
+                            <div class="wrap_big flex-c j-between">
+                                <div class="f24 w7 t-f20">
+                                    <span lang="en">Fundamental HTML & CSS</span>
+                                    <span lang="vi">HTML & CSS Cơ bản</span>
+                                </div>
+                                <div class="f20">
+                                    <span lang="en">
+                                        Build the foundation of website with HTML & CSS
+                                    </span>
+                                    <span lang="vi"
+                                        >Nền tảng xây dựng giao diện web với
+                                        HTML và CSS</span
+                                    >
+                                </div>
+                                <div class="f15 flex-r g10">
+                                    <div>
+                                        <span lang="en">
+                                            <b>Duration:</b> 2 days
+                                        </span>
+                                        <span lang="vi">
+                                            <b>Thời gian học:</b> 2 ngày
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span lang="en">
+                                            <b>Level:</b> Beginner
+                                        </span>
+                                        <span lang="vi">
+                                            <b>Mức độ:</b> Cơ bản
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="PC Tablet Mobile">
+                            <div class="flex-c wrap_small a-center lock-container">
+                                <div class="lock">
+
+                                </div>
+                                <svg height="200" width="50" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="50%" y1="0" x2="50%" y2="125" class="line"></line>
+                                </svg>
+                            </div>
+                            <div class="wrap_big flex-c j-between">
+                                <div class="f24 w7 t-f20">
+                                    <span lang="en">Fundamental HTML & CSS</span>
+                                    <span lang="vi">HTML & CSS Cơ bản</span>
+                                </div>
+                                <div class="f20">
+                                    <span lang="en">
+                                        Build the foundation of website with HTML & CSS
+                                    </span>
+                                    <span lang="vi"
+                                        >Nền tảng xây dựng giao diện web với
+                                        HTML và CSS</span
+                                    >
+                                </div>
+                                <div class="f15 flex-r g10">
+                                    <div>
+                                        <span lang="en">
+                                            <b>Duration:</b> 2 days
+                                        </span>
+                                        <span lang="vi">
+                                            <b>Thời gian học:</b> 2 ngày
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span lang="en">
+                                            <b>Level:</b> Beginner
+                                        </span>
+                                        <span lang="vi">
+                                            <b>Mức độ:</b> Cơ bản
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- two things after finishing school -->
+                <div class="box_small flex-wrap g21 m-flex-c">
+                    <div class="wrap flex-c g17 j-center">
+                        <div class="f28 w7 t-f24 m-f18">
+                            <span lang="en">Skill accquired</span>
+                            <span lang="vi">Kỹ Năng Đạt Được</span>
+                        </div>
+                        <div class="box_1 flex-wrap g14">
+                            <div class="box_2">
+                                <ul class="f18 w5 g12 flex-c">
+                                    <li>
+                                        <span lang="en">Proficient in CSS / HTML</span>
+                                        <span lang="vi">Thành thạo CSS / HTML</span>
+                                    </li>
+                                    <li>
+                                        <span lang="en">Know how to make responsive website</span>
+                                        <span lang="vi">Biết cách làm thiết kể web đáp ứng</span>
+                                    </li>
+                                    <li>
+                                        <span lang="en">Proficient in JS / React / Other frameworks</span>
+                                        <span lang="vi">Thành thạo JS / React / Other frameworks</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap flex-c g14 j-center">
+                        <div class="f28 w7 t-f24 m-f18">
+                            <span lang="en">Cơ Hội Nghề Nghiệp</span>
+                            <span lang="vi">Work Opportunities</span>
+                        </div>
+                        <div class="box_2">
+                            <ul class="f18 w5 g12 flex-c">
+                                <li>
+                                    <span lang="en">Front-end developer</span>
+                                    <span lang="vi">Lập trình viên front-end</span>
+                                </li>
+                                <li>
+                                    <span lang="en">Back-end developer</span>
+                                    <span lang="vi">Lập trình viên Back-end</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- selection table -->
+        <div class="overlay" id="overlay">
+            <div class="j-center a-center flex-c g12 container__overlay">
+                <div class="f24 w7 text-center t-f20">
+                    <span class="text-en" lang="en">Are you absolutely sure you want this?</span>
+                    <span class="text-vi" lang="vi">Bạn Chắn Chắn Chọn Mục Tiêu Này?</span>
+                </div>
+                <div class="f14 w4 text-center content m-f12">
+                    <span class="desc-en" lang="en">
+                        Warning: If you confirm, you'll lose the ability to choose another
+                        work goal until the current one is completed
+                    </span>
+                    <span class="desc-vi" lang="vi">
+                        Lưu ý: Nếu xác nhận, bạn không thể chọn mục tiêu khác cho tới
+                        khi hoàn thành mục tiêu hiện tại.
+                    </span>
+                </div>
+                <div class="PC g10 Mobile Tablet">
+                    <button class="tertiary" onclick="(closeOverlay())">
+                        <span lang="en">Cancel</span>
+                        <span lang="vi">Hủy bỏ</span>
+                    </button>
+                    <button class="primary" onclick="(chooseOverlay())">
+                        <span lang="en">Confirm</span>
+                        <span lang="vi">Xác nhận</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <footer class="bg-blue-dark2">
+            <div class="container flex-r t-flex-c j-between g40">
+                <div class="section">
+                    <div class="logo">
+
+                    </div>
+                    <div class="line-140">
+                        <span lang="vi">
+                            &copy; 2025 BCNStudying.<br>Mọi quyền được bảo lưu
+                        </span>
+                        <span lang="en">
+                            &copy; 2025 BCNStudying.<br>All Right Reserved
+                        </span>
+                    </div>
+                </div>
+                <div class="flex-r m-flex-c g40">
+                    <div class="section flex-c g20">
+                        <div class="type">
+                            <span lang="vi">
+                                Tài nguyên
+                            </span>
+                            <span lang="en">
+                                Resources
+                            </span>  
+                        </div>
+                        <div class="links flex-c g5">
+                            <a href="#">
+                                <span lang="vi">
+                                    Câu hỏi thường gặp
+                                </span>
+                                <span lang="en">
+                                    FAQ
+                                </span>
+                            </a>
+                            <a href="#">
+                                <span lang="vi">
+                                    Chính sách và Điều khoản
+                                </span>
+                                <span lang="en">
+                                    Term of Serivce
+                                </span>
+                            </a>
+                            <a href="#">
+                                <span lang="vi">
+                                    Chính sách bảo mật
+                                </span>
+                                <span lang="en">
+                                    Privacy Policy
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="section flex-c g20">
+                        <div class="type">
+                            <span lang="vi">
+                                Thông tin liên hệ
+                            </span>
+                            <span lang="en">
+                                Contact Information
+                            </span>  
+                        </div>
+                        <div class="links flex-c g5">
+                            <div>
+                                Email: BCNStudy@Night.service
+                            </div>
+                            <div>
+                                <span lang="vi">
+                                    Địa chỉ: 314/20 Quận Ruins, Wonderland, Thực tại #1024A
+                                </span>
+                                <span lang="en">
+                                    Address: 314/20 Ruins District, Wonderland, Reality #1024A
+                                </span>
+                            </div>
+                            <div>
+                                <span lang="vi">
+                                    Số điện thoại: 0447859496
+                                </span>
+                                <span lang="en">
+                                    Phone Number: 0447859496
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script
+        src = "https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity = "sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin = "anonymous"
+    >
+    </script>
+    <script src="index.js"></script>
+    <script>
+        let a;
+        let flag = 0;
+        function skip() {
+            flag = 1
+            let titleArray = ["Bạn có chắc bạn muốn bỏ qua phần này?","Are you sure you want to skip this part?"]
+            let descArray = [
+                "Lưu ý: Bạn sẽ phải làm một bài kiểm tra và trả lời đúng hơn 80% thì mới có thể bỏ qua phẩn này",
+                "Disclaimer: You'll have to take a test and scored more than 80% to be able to skip this part."
+            ]
+            setModalMessage(titleArray, descArray)
+        }
+        function setModalMessage(titleArray, descArray) {
+            let titleVi = titleArray[0], titleEn = titleArray[1]
+            let descVi = descArray[0], descEn = descArray[1]
+            $(".text-en").text(titleEn)
+            $(".desc-en").text(descEn)
+            $(".text-vi").text(titleVi)
+            $(".desc-vi").text(descVi)
+            openOverlay()
+        }
+        function openOverlay() {
+            document.querySelector(".overlay").style.display = "flex";
+        }
+        function closeOverlay() {
+            document.querySelector(".overlay").style.display = "none";
+        }
+        function chooseOverlay() {
+            if (flag == 0) {
+                document.getElementsByClassName("lock")[0].classList.add("active");
+                document.getElementsByClassName("lock")[0].textContent = "1";
+                document.getElementById("demo").style.display = "none";
+                closeOverlay()
+            }
+            if (flag == 1) {
+                window.location.assign("/index.html")
+            }
+        }
+        document.querySelector(".overlay").addEventListener("click", function(e) {
+            if (e.target.className == "overlay") {
+                closeOverlay()
+            }
+        })
+    </script>
+</html>

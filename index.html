@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/utils.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="flex-r a-center j-center bg-blue-dark2">
+        <div class="flex-r g40 container j-between">
+            <div class="flex-r g15">
+                <img src="/assets/icon/hamburger.svg" class="Tablet Mobile"> 
+                <div class="logo a-center">
+                </div>
+            </div>
+            <menu class="flex-r a-center PC">
+                <button class="item active" onclick="window.location.assign('/index.html')">
+                    <span lang="vi">
+                        Trang chủ
+                    </span>
+                    <span lang="en">
+                        Home
+                    </span>
+                </button>
+                <button class="item" onclick="window.location.assign('/course.html')">
+                    <span lang="vi">
+                        Khóa học
+                    </span>
+                    <span lang="en">
+                        Courses
+                    </span>
+                </button>
+                <button class="item" onclick="window.location.assign('/intro.html')">
+                    <span lang="vi">
+                        Giới thiệu
+                    </span>
+                    <span lang="en">
+                        Introduction
+                    </span>
+                </button>
+                <button class="item" onclick="window.location.assign('/contact.html')">
+                    <span lang="vi">
+                        Liên hệ
+                    </span>
+                    <span lang="en">
+                        Contact us
+                    </span>
+                </button>
+            </menu>
+            <div class="utils a-center">
+                <button class="tertiary dropdown" onclick="changeLanuage()">
+                    <img src="./assets/icon/global.svg">
+                    <span id="lang">
+                        EN
+                    </span>
+                </button>
+                <button class="secondary">
+                    <span lang="vi">
+                        Đăng ký
+                    </span>
+                    <span lang="en">
+                        Sign Up
+                    </span>
+                </button>
+                <button class="primary">
+                    <span lang="vi">
+                        Đăng nhập
+                    </span>
+                    <span lang="en">
+                        Sign In
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <section class="main-page">
+        <div class="overlay">
+
+        </div>
+        <div class="container a-center j-center flex-c text-center">
+            <div class="f65 t-f40 m-f24 w6">
+                <span lang="vi">
+                    Con đường đến với thành công!
+                </span>
+                <span lang="en">
+                    Road to Success!
+                </span>
+            </div>
+            <div class="f25 t-f18 m-f14 line-140">
+                <span lang="vi">
+                    Chọn mục tiêu nghề nghiệp của mình và nhận lộ trình học từ cơ bạn đến nâng cao<br>
+                    Còn chần chờ gì nữa mà không bắt đầu hành trình<br>
+                    <span class="f34 t-f24 m-f14 c-blue-light w6">
+                        trở thành lập trình viên chuyên nghiệp hôm nay!
+                    </span>
+                </span>
+                <span lang="en">
+                    Choose your work goal and receive a roadmap from beginner to master<br>
+                    What are you wating for. Embark on your journey to<br>
+                    <span class="f34 t-f24 m-f14 c-blue-light w6">
+                        become a professional developer today!
+                    </span>
+                </span>
+            </div>
+        </div>
+        <button class="primary f20 m-f14 a-center j-center" onclick="window.location.assign('/course.html')">
+            <span lang="vi">
+                Bắt đầu ngay!
+            </span>
+            <span lang="en">
+                Start now!
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path class="arrow-right"/>
+            </svg>
+        </button>
+    </section>
+    <section class="section2 bg-blue-dark2">
+        <div class="container text-center flex-c">
+            <div class="f35 m-f27 w7">
+                <span lang="vi">
+                    Xem trước những lộ trình hiện có
+                </span>
+                <span lang="en">
+                    Check out our available roadmap
+                </span>
+            </div>
+            <div class="flex-r g10 t-g20 flex-wrap j-between">
+                <div class="card bg-blue-gray a-center j-center flex-c">
+                    <div class=" icon">
+                        <img src="/assets/icon/web.svg">
+                    </div>
+                    <div class="f20 w7">
+                        <span lang="en">
+                            Web Development
+                        </span>
+                        <span lang="vi">
+                            Lập trình Web
+                        </span>
+                    </div>
+                    <div class="f17 w5">
+                        <span lang="en">
+                            Build modern websites
+                        </span>
+                        <span lang="vi">
+                            Xây dụng những trang web hiện đại
+                        </span>
+                    </div>
+                </div>
+                <div class="card bg-blue-gray a-center j-center flex-c">
+                    <div class="icon">
+                        <img src="/assets/icon/app.svg">
+                    </div>
+                    <div class="f20 w7">
+                        <span lang="en">
+                            App Development
+                        </span>
+                        <span lang="vi">
+                            Lập trình App
+                        </span>
+                    </div>
+                    <div class="f17 w5">
+                        <span lang="en">
+                            Build useful application
+                        </span>
+                        <span lang="vi">
+                            Xây dựng những ứng dụng hữu ích
+                        </span>
+                    </div>
+                </div>
+                <div class="card bg-blue-gray a-center j-center flex-c">
+                    <div class=" icon">
+                        <img src="/assets/icon/design.svg">
+                    </div>
+                    <div class="f20 w7">
+                        <span lang="en">
+                            Design
+                        </span>
+                        <span lang="vi">
+                            Thiết kế
+                        </span>
+                    </div>
+                    <div class="f17 w5">
+                        <span lang="en">
+                            Design wonderful interface
+                        </span>
+                        <span lang="vi">
+                            Thiết kế những giao diện tuyệt vời
+                        </span>
+                    </div>
+                </div>
+                <div class="card bg-blue-gray a-center j-center flex-c">
+                    <div class=" icon">
+                        <img src="/assets/icon/database.svg">
+                    </div>
+                    <div class="f20 w7">
+                        <span lang="vi">
+                            Lập Trình Game
+                        </span>
+                        <span lang="en">
+                            Game Development
+                        </span>
+                    </div>
+                    <div class="f17 w5">
+                        <span lang="en">
+                            Create entertaining games
+                        </span>
+                        <span lang="vi">
+                            Tạo ra những trò chơi ấn tượng
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section3">
+        <div class="container flex-c">
+            <div class="flex-r j-between a-end">
+                <div class="flex-c g6">
+                    <div class="f36 m-f25 w5">
+                        <span lang="vi">
+                            Khóa học nổi bật
+                        </span>
+                        <span lang="en">
+                            Notable Courses
+                        </span>
+                    </div>
+                    <div class="f20 m-f15 w5">
+                        <span lang="vi">
+                            Xem trước khóa học
+                        </span>
+                        <span lang="en">
+                            Check out our notable courses
+                        </span>
+                    </div>
+                </div>
+                <button class="tertiary" onclick="window.location.assign('/course.html')">
+                    <span lang="vi">
+                        Xem tất cả
+                    </span>
+                    <span lang="en">
+                        See all
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path class="arrow-right" style="--color: var(--blue);"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex-r flex-wrap j-left g45 m-g10">
+                <div class="card flex-c g10">
+                    <div class="image HTML">
+
+                    </div>
+                    <div class="flex-c g10">
+                        <div class="f20 m-f16 w7">
+                            <span lang="vi">
+                                HTML & CSS cơ bản
+                            </span>
+                            <span lang="en">
+                                Fundamental HTML & CSS
+                            </span>
+                        </div>
+                        <div class="flex-r m-flex-c a-center m-a-start g15 m-g5">
+                            <div class="flex-r t-f15 a-center">
+                                <img src="./assets/icon/level.svg">
+                                <span lang="vi">
+                                    Cơ bản
+                                </span>
+                                <span lang="en">
+                                    Newbie Course
+                                </span>
+                            </div>
+                            <div class="flex-r t-f15 g3 a-center">
+                                <img src="./assets/icon/time.svg">
+                                <span lang="vi">
+                                    1-2 tuần
+                                </span>
+                                <span lang="en">
+                                    1 to 2 weeks
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card flex-c g10">
+                    <div class="image JS">
+
+                    </div>
+                    <div class="flex-c g10">
+                        <div class="f20 m-f16 w7">
+                            <span lang="vi">
+                                JavaScript cơ bản
+                            </span>
+                            <span lang="en">
+                                Fundamental JavaScript
+                            </span>
+                        </div>
+                        <div class="flex-r m-flex-c a-center m-a-start g15 m-g5">
+                            <div class="flex-r t-f15 a-center">
+                                <img src="./assets/icon/level.svg">
+                                <span lang="vi">
+                                    Cơ bản
+                                </span>
+                                <span lang="en">
+                                    Newbie Course
+                                </span>
+                            </div>
+                            <div class="flex-r t-f15 g3 a-center">
+                                <img src="./assets/icon/time.svg">
+                                <span lang="vi">
+                                    1-2 tuần
+                                </span>
+                                <span lang="en">
+                                    1 to 2 weeks
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card flex-c g10">
+                    <div class="image Design">
+
+                    </div>
+                    <div class="flex-c g10">
+                        <div class="f20 m-f16 w7">
+                            <span lang="vi">
+                                Thiết kế cơ bản
+                            </span>
+                            <span lang="en">
+                                Fundamental Design
+                            </span>
+                        </div>
+                        <div class="flex-r m-flex-c a-center m-a-start g15 m-g5">
+                            <div class="flex-r t-f15 a-center">
+                                <img src="./assets/icon/level.svg">
+                                <span lang="vi">
+                                    Cơ bản
+                                </span>
+                                <span lang="en">
+                                    Newbie Course
+                                </span>
+                            </div>
+                            <div class="flex-r t-f15 g3 a-center">
+                                <img src="./assets/icon/time.svg">
+                                <span lang="vi">
+                                    1-2 tuần
+                                </span>
+                                <span lang="en">
+                                    1 to 2 weeks
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card flex-c g10">
+                    <div class="image C">
+
+                    </div>
+                    <div class="flex-c g10">
+                        <div class="f20 m-f16 w7">
+                            <span lang="vi">
+                                C/C++ cơ bản
+                            </span>
+                            <span lang="en">
+                                Fundamental C/C++
+                            </span>
+                        </div>
+                        <div class="flex-r m-flex-c a-center m-a-start g15 m-g5">
+                            <div class="flex-r t-f15 a-center">
+                                <img src="./assets/icon/level.svg">
+                                <span lang="vi">
+                                    Cơ bản
+                                </span>
+                                <span lang="en">
+                                    Newbie Course
+                                </span>
+                            </div>
+                            <div class="flex-r t-f15 g3 a-center">
+                                <img src="./assets/icon/time.svg">
+                                <span lang="vi">
+                                    1-2 tuần
+                                </span>
+                                <span lang="en">
+                                    1 to 2 weeks
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card flex-c g10">
+                    <div class="image HTML">
+
+                    </div>
+                    <div class="flex-c g10">
+                        <div class="f20 m-f16 w7">
+                            <span lang="vi">
+                                Trang Web Responsive
+                            </span>
+                            <span lang="en">
+                                Responsive Website
+                            </span>
+                        </div>
+                        <div class="flex-r m-flex-c a-center m-a-start g15 m-g5">
+                            <div class="flex-r t-f15 a-center">
+                                <img src="./assets/icon/level.svg">
+                                <span lang="vi">
+                                    Nâng cao
+                                </span>
+                                <span lang="en">
+                                    Advanced
+                                </span>
+                            </div>
+                            <div class="flex-r t-f15 g3 a-center">
+                                <img src="./assets/icon/time.svg">
+                                <span lang="vi">
+                                    1-2 tuần
+                                </span>
+                                <span lang="en">
+                                    1 to 2 weeks
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card flex-c g10">
+                    <div class="image Kotlin">
+
+                    </div>
+                    <div class="flex-c g10">
+                        <div class="f20 m-f16 w7">
+                            <span lang="vi">
+                                Lập trình Kotlin
+                            </span>
+                            <span lang="en">
+                                Kotlin fundamental
+                            </span>
+                        </div>
+                        <div class="flex-r m-flex-c a-center m-a-start g15 m-g5">
+                            <div class="flex-r t-f15 a-center">
+                                <img src="./assets/icon/level.svg">
+                                <span lang="vi">
+                                    Nâng cao
+                                </span>
+                                <span lang="en">
+                                    Advanced
+                                </span>
+                            </div>
+                            <div class="flex-r t-f15 g3 a-center">
+                                <img src="./assets/icon/time.svg">
+                                <span lang="vi">
+                                    1-2 tuần
+                                </span>
+                                <span lang="en">
+                                    1 to 2 weeks
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section4 bg-blue-dark2">
+        <div class="container flex-c text-center a-center j-center g25">
+            <div class="f38 t-f26 w7">
+                <span lang="vi">
+                    Chưa biết chuyên ngành nào phù hợp với mình?
+                </span>
+                <span lang="en">
+                    Don't know what specialty suit you best?
+                </span>
+            </div>
+            <div class="f23 t-f18 w5">
+                <span lang="vi">
+                    Đừng lo! Hãy làm bài trắc nghiệm để chọn ra được ngành nghề tiềm năng cho tương lai của bạn!
+                </span>
+                <span lang="en">
+                    Fret not! Do a quiz to see the potential path waiting for your future!
+                </span>
+            </div>
+            <button class="primary" onclick="window.location.assign('/quiz2.html')">
+                <span lang="vi">
+                    Làm bài trắc nghiệm
+                </span>
+                <span lang="en">
+                    Take a quiz
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path class="arrow-right"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+    <footer>
+        <div class="container flex-r t-flex-c j-between g40">
+            <div class="section">
+                <div class="logo">
+
+                </div>
+                <div class="line-140">
+                    <span lang="vi">
+                        &copy; 2025 BCNStudying.<br>Mọi quyền được bảo lưu
+                    </span>
+                    <span lang="en">
+                        &copy; 2025 BCNStudying.<br>All Right Reserved
+                    </span>
+                </div>
+            </div>
+            <div class="flex-r m-flex-c g40">
+                <div class="section flex-c g20">
+                    <div class="type">
+                        <span lang="vi">
+                            Tài nguyên
+                        </span>
+                        <span lang="en">
+                            Resources
+                        </span>  
+                    </div>
+                    <div class="links flex-c g5">
+                        <a href="#">
+                            <span lang="vi">
+                                Câu hỏi thường gặp
+                            </span>
+                            <span lang="en">
+                                FAQ
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span lang="vi">
+                                Chính sách và Điều khoản
+                            </span>
+                            <span lang="en">
+                                Term of Serivce
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span lang="vi">
+                                Chính sách bảo mật
+                            </span>
+                            <span lang="en">
+                                Privacy Policy
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="section flex-c g20">
+                    <div class="type">
+                        <span lang="vi">
+                            Thông tin liên hệ
+                        </span>
+                        <span lang="en">
+                            Contact Information
+                        </span>  
+                    </div>
+                    <div class="links flex-c g5">
+                        <div>
+                            Email: BCNStudy@Night.service
+                        </div>
+                        <div>
+                            <span lang="vi">
+                                Địa chỉ: 314/20 Quận Ruins, Wonderland, Thực tại #1024A
+                            </span>
+                            <span lang="en">
+                                Address: 314/20 Ruins District, Wonderland, Reality #1024A
+                            </span>
+                        </div>
+                        <div>
+                            <span lang="vi">
+                                Số điện thoại: 0447859496
+                            </span>
+                            <span lang="en">
+                                Phone Number: 0447859496
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"
+></script>
+<script src="/index.js"></script>
+<script>
+    $(".section3 .card .image").bind("click", function() {
+        window.location.assign("/class.html")
+    })
+    $(".section2 .card").bind("click", function() {
+        window.location.assign("/roadmap.html")
+    })
+</script>
+</html>

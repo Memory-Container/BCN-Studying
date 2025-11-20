@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/utils.css">
+    <link rel="stylesheet" href="/css/class.css">
+
+</head>
+<body>
+    <header class="flex-r a-center j-center bg-blue-dark2">
+        <div class="flex-r g40 container j-between">
+            <div class="flex-r g15">
+                <img src="/assets/icon/hamburger.svg" class="Tablet Mobile"> 
+                <div class="logo a-center">
+                </div>
+            </div>
+            <menu class="flex-r a-center PC">
+                <button class="item" onclick="window.location.assign('/index.html')">
+                    <span lang="vi">
+                        Trang chủ
+                    </span>
+                    <span lang="en">
+                        Home
+                    </span>
+                </button>
+                <button class="item active" onclick="window.location.assign('/course.html')">
+                    <span lang="vi">
+                        Khóa học
+                    </span>
+                    <span lang="en">
+                        Courses
+                    </span>
+                </button>
+                <button class="item" onclick="window.location.assign('/intro.html')">
+                    <span lang="vi">
+                        Giới thiệu
+                    </span>
+                    <span lang="en">
+                        Introduction
+                    </span>
+                </button>
+                <button class="item" onclick="window.location.assign('/contact.html')">
+                    <span lang="vi">
+                        Liên hệ
+                    </span>
+                    <span lang="en">
+                        Contact us
+                    </span>
+                </button>
+            </menu>
+            <div class="utils a-center">
+                <button class="tertiary dropdown" onclick="changeLanuage()">
+                    <img src="./assets/icon/global.svg">
+                    <span id="lang">
+                        EN
+                    </span>
+                </button>
+                <button class="secondary">
+                    <span lang="vi">
+                        Đăng ký
+                    </span>
+                    <span lang="en">
+                        Sign Up
+                    </span>
+                </button>
+                <button class="primary">
+                    <span lang="vi">
+                        Đăng nhập
+                    </span>
+                    <span lang="en">
+                        Sign In
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <section class="section1 bg-blue-dark3">
+        <div class="container flex-c g10">
+            <a href="/course.html" class="flex-r g5 a-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="flip">
+                    <path class="arrow-right" />
+                </svg>
+                <div class="f17 w7">
+                    <span lang="vi">Quay lại</span>
+                    <span lang="en">Return</span>
+                </div>
+            </a>
+            <div class="f25 w7">
+                <span lang="vi">HTML & CSS Cơ Bản</span>
+                <span lang="en">Fundamental HTML & CSS</span>
+            </div>
+            <div class="f15 w5">
+                <span lang="vi">
+                    Khóa học này sẽ giúp bạn nắm vững nền tảng HTML và
+                    CSS để xây dựng các trang web hiện đại.
+                </span>
+                <span lang="en">
+                    This course will help you build the necessary HTML and CSS
+                    foundations to build modern websites.
+                </span>
+            </div>
+            <div class="flex-r a-center g15 m-g10">
+                <div class="flex-r t-f15 a-center">
+                    <img src="./assets/icon/level.svg">
+                    <span lang="vi">
+                        Cơ bản
+                    </span>
+                    <span lang="en">
+                        Newbie Course
+                    </span>
+                </div>
+                <div class="flex-r t-f15 g3 a-center">
+                    <img src="./assets/icon/time.svg">
+                    <span lang="vi">
+                        2 - 4 giờ
+                    </span>
+                    <span lang="en">
+                        2 to 4 hours
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section2">
+        <div class="container flex-c g12">
+            <div class="bar flex-r">
+                <button class="select active" onclick="overviewClick()" id="overview-btn">
+                    <span lang="vi">Tổng Quan</span>
+                    <span lang="en">Overview</span>
+                </button>
+                <button class="select" onclick="contentClick()" id="content-btn">
+                    <span lang="vi">Nội Dung</span>
+                    <span lang="en">Content</span>
+                </button>
+            </div>
+            <div class="flex-r j-between a-start g10">
+                <div class="content flex-c g10" id="content" style="display: none;">
+                    <div class="f25 w7">
+                        <span lang="vi">Bạn sẽ học những gì?</span>
+                        <span lang="en">What will you learn in this course?</span>
+                    </div>
+                    <div class="card flex-c g10">
+                        <div class="f17 w7">
+                            <span lang="vi">Phần 1: Giới thiệu về IDE, Vercel, Github và git</span>
+                            <span lang="en">Part 1: IDE, Vercel, Github and git Introduction</span> 
+                        </div>
+                        <div class="flex-c g5">
+                            <div class="flex-r a-center g10">
+                                <img src="/assets/icon/checkmark.svg" class="tick"/>
+                                <div class="f15">
+                                    <span lang="vi">
+                                        Cách để tạo tài khoản Github và tạo một repository
+                                    </span>
+                                    <span lang="en">
+                                        How to create a Github account and create a repository
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex-r a-center g10">
+                                <img src="/assets/icon/checkmark.svg" class="tick"/>
+                                <div class="f15">
+                                    <span lang="vi">
+                                        Cách để khởi tạo và sử dụng git trong Visual Studio Code
+                                    </span>
+                                    <span lang="en">
+                                        Learn how to set up and use git in Visual Studio Code
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex-r a-center g10">
+                                <img src="/assets/icon/checkmark.svg" class="tick"/>
+                                <div class="f15">
+                                    <span lang="vi">
+                                        Cách để liên kết tài khoàn Github với Vercel và tạo một trang web
+                                    </span>
+                                    <span lang="en">
+                                        How to link your Github account with Vercel and how to deploy a website using Vercel
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card flex-c g10">
+                        <div class="f17 w7">
+                            <span lang="vi">Phần 2: Giới thiệu về HTML</span>
+                            <span lang="en">Part 2: HTML Introduction</span> 
+                        </div>
+                        <div class="flex-c g5">
+                            <div class="flex-r a-center g10">
+                                <img src="/assets/icon/checkmark.svg" class="tick"/>
+                                <div class="f15">
+                                    <span lang="vi">
+                                        Hyper Text Markup Language (HTML) là gì?
+                                    </span>
+                                    <span lang="en">
+                                        What is Hyper Text Markup Language (HTML)?
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex-r a-center g10">
+                                <img src="/assets/icon/checkmark.svg" class="tick"/>
+                                <div class="f15">
+                                    <span lang="vi">
+                                        Cấu trúc của một trang HTML cơ bản
+                                    </span>
+                                    <span lang="en">
+                                        Structure of an empty website
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex-r a-center g10">
+                                <img src="/assets/icon/checkmark.svg" class="tick"/>
+                                <div class="f15">
+                                    <span lang="vi">
+                                        Cách thẻ trong HTML hoạt động và một số loại thẻ cơ bản
+                                    </span>
+                                    <span lang="en">
+                                        What are HTML tags and basic HTML tags
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card flex-c g10">
+                        <div class="f17 w7">
+                            <span lang="vi">Phần 3: Giới thiệu CSS</span>
+                            <span lang="en">Part 3: CSS Introduction</span> 
+                        </div>
+                        <div class="flex-c g5">
+                            <div class="flex-r a-center g10">
+                                <img src="/assets/icon/checkmark.svg" class="tick"/>
+                                <div class="f15">
+                                    <span lang="vi">
+                                        Cascading Style Sheets (CSS) là gì?
+                                    </span>
+                                    <span lang="en">
+                                        What is Cascading Style Sheets (CSS)
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex-r a-center g10">
+                                <img src="/assets/icon/checkmark.svg" class="tick"/>
+                                <div class="f15">
+                                    <span lang="vi">
+                                        Cách để tạo một tập tin CSS và liên kết nó đến HTML
+                                    </span>
+                                    <span lang="en">
+                                        How to create a CSS file and link it to HTML
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex-r a-center g10">
+                                <img src="/assets/icon/checkmark.svg" class="tick"/>
+                                <div class="f15">
+                                    <span lang="vi">
+                                        Cấu trúc của một tập tin CSS
+                                    </span>
+                                    <span lang="en">
+                                        Structure of a CSS file
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex-r a-center g10">
+                                <img src="/assets/icon/checkmark.svg" class="tick"/>
+                                <div class="f15">
+                                    <span lang="vi">
+                                        Cách khai báo bộ định danh và một số thuộc tính, giá trị cơ bản
+                                    </span>
+                                    <span lang="en">
+                                        How to declare CSS identifiers and fundamental properties and their values
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content flex-c g16" id="overview">
+                    <div class="f25 w7">
+                        <span lang="vi">Giới thiệu khóa học</span>
+                        <span lang="en">Course Introduction</span>
+                    </div>
+                    <div class="flex-c g10">
+                        <div class="f15 w5 line-140">
+                            <span lang="vi">
+                                Chào mừng bạn đến với khóa học HTML & CSS cơ bản. Thì ở đây sẽ giúp cho các bạn hiểu về những
+                                thứ cơ bản nhất mà tất cả những lập trình viên front-end đều bắt buộc phải nắm rõ. 
+                                <br>Khóa học bao gồm 2 phần cơ bản: Github, Vercel, git và HTML, CSS
+                            </span>
+                            <span lang="en">
+                                Welcome you to Fundamental HTML & CSS. Here we'll help you understand the most basic of stuff that every
+                                front-end developer must know. 
+                                <br>This course have 2 parts: Github, Vercel, git and HTML, CSS
+                            </span>
+                        </div>
+                        <div class="flex-c g10">
+                            <div class="f23 w7">
+                                <span lang="vi">Bạn sẽ học được gì từ khóa học này</span>                                
+                                <span lang="en">What will you learn from this course</span>
+                            </div>
+                            <div class="flex-c g5">
+                                <div class="flex-r a-center g10">
+                                    <img src="/assets/icon/checkmark.svg" class="tick"/>
+                                    <div class="f15">
+                                        <span lang="vi">
+                                            Cách sử dụng Github, Vercel và git trong Visual Studio Code
+                                        </span>
+                                        <span lang="en">
+                                            How to use Github, Vercel and git in Visual Studio Code
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="flex-r a-center g10">
+                                    <img src="/assets/icon/checkmark.svg" class="tick"/>
+                                    <div class="f15">
+                                        <span lang="vi">
+                                            HTML, CSS là gì
+                                        </span>
+                                        <span lang="en">
+                                            What is HTML, CSS
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="flex-r a-center g10">
+                                    <img src="/assets/icon/checkmark.svg" class="tick"/>
+                                    <div class="f15">
+                                        <span lang="vi">
+                                            Cấu trúc của một trang HTML và CSS
+                                        </span>
+                                        <span lang="en">
+                                            Structure of an empty HTML website and CSS
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="flex-r a-center g10">
+                                    <img src="/assets/icon/checkmark.svg" class="tick"/>
+                                    <div class="f15">
+                                        <span lang="vi">
+                                            Một số thẻ cơ bản trong HTML và các sử dụng bộ định danh trong CSS
+                                        </span>
+                                        <span lang="en">
+                                            Basic HTML tags and how to use identifiers in CSS
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-c g10">
+                            <div class="f23 w7">
+                                <span lang="vi">Yêu cầu</span>                                
+                                <span lang="en">Requirements</span>
+                            </div>
+                            <div class="flex-c g5">
+                                <div class="flex-r a-center g10">
+                                    <div class="f15">
+                                        <span lang="vi">
+                                            Có Visual Studio Code
+                                        </span>
+                                        <span lang="en">
+                                            Have Visual Studio Code install
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="flex-r a-center g10">
+                                    <div class="f15">
+                                        <span lang="vi">
+                                            Biết cách tạo và đổi tên tập tin và định dạng của chúng
+                                        </span>
+                                        <span lang="en">
+                                            Know how to create and rename files and their extensions
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="flex-c g10 a-start">
+                        <div class="f20 w7">
+                            <span lang="vi">Học khóa học này?</span>
+                            <span lang="en">Partake in this course?</span>
+                        </div>
+                        <div class="f13">
+                            <span lang="vi">Bạn thể học khóa học này mà không cần phải chọn lộ trình học</span>
+                            <span lang="en">You can study this course as a standalone course without having to chose a work goal</span>
+                        </div>
+                        <button class="primary">
+                            <span lang="vi">Nhận khóa học này</span>
+                            <span lang="en">Take this course</span>                            
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-blue-dark2">
+        <div class="container flex-r t-flex-c j-between g40">
+            <div class="section">
+                <div class="logo">
+
+                </div>
+                <div class="line-140">
+                    <span lang="vi">
+                        &copy; 2025 BCNStudying.<br>Mọi quyền được bảo lưu
+                    </span>
+                    <span lang="en">
+                        &copy; 2025 BCNStudying.<br>All Right Reserved
+                    </span>
+                </div>
+            </div>
+            <div class="flex-r m-flex-c g40">
+                <div class="section flex-c g20">
+                    <div class="type">
+                        <span lang="vi">
+                            Tài nguyên
+                        </span>
+                        <span lang="en">
+                            Resources
+                        </span>  
+                    </div>
+                    <div class="links flex-c g5">
+                        <a href="#">
+                            <span lang="vi">
+                                Câu hỏi thường gặp
+                            </span>
+                            <span lang="en">
+                                FAQ
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span lang="vi">
+                                Chính sách và Điều khoản
+                            </span>
+                            <span lang="en">
+                                Term of Serivce
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span lang="vi">
+                                Chính sách bảo mật
+                            </span>
+                            <span lang="en">
+                                Privacy Policy
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="section flex-c g20">
+                    <div class="type">
+                        <span lang="vi">
+                            Thông tin liên hệ
+                        </span>
+                        <span lang="en">
+                            Contact Information
+                        </span>  
+                    </div>
+                    <div class="links flex-c g5">
+                        <div>
+                            Email: BCNStudy@Night.service
+                        </div>
+                        <div>
+                            <span lang="vi">
+                                Địa chỉ: 314/20 Quận Ruins, Wonderland, Thực tại #1024A
+                            </span>
+                            <span lang="en">
+                                Address: 314/20 Ruins District, Wonderland, Reality #1024A
+                            </span>
+                        </div>
+                        <div>
+                            <span lang="vi">
+                                Số điện thoại: 0447859496
+                            </span>
+                            <span lang="en">
+                                Phone Number: 0447859496
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"
+></script>
+<script>
+    function overviewClick() {       
+        $("#content").css("display", "none")
+        $("#overview").css("display", "flex")
+        $("#overview-btn").addClass("active")
+        $("#content-btn").removeClass("active")
+    }
+    function contentClick() {
+        $("#content").css("display", "flex")
+        $("#overview").css("display", "none")
+        $("#overview-btn").removeClass("active")
+        $("#content-btn").addClass("active")
+    }
+</script>
+<script src="/index.js"></script>
+</html>

@@ -1,0 +1,36 @@
+.section1 {
+    padding: 80px 0 20px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.24);
+}
+.section2 {
+    padding: 10px 0 40px 0;
+    .content {
+        width: 100%;
+        max-width: 600px;
+    }
+    .box {
+        width: 50%;
+        max-width: 264px;
+        padding: 10px;
+        background-color: var(--blue-dark2);
+        border: 1px dashed white;
+        border-radius: 10px;
+    }
+    .bar {
+        width: fit-content;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.24);
+    }
+    button.select {
+        padding: 12px 16px;
+        border-bottom: 1px solid transparent;
+        transition: 0.25s;
+        border-top: 0px;
+        border-right: 0px;
+        border-left: 0px;
+        opacity: 0.5;
+    }
+    button.active {
+        border-bottom: 1px solid var(--blue);
+        opacity: 1;
+    }
+}

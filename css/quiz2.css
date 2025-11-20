@@ -60,3 +60,22 @@
         filter: brightness(1.1);
     }
 }
+@media only screen and (max-width: 1024px) {
+    .choices {
+        height: unset;
+    }
+    .quiz {
+        padding: 80px 0 20px 0;
+    }
+}
+@media only screen and (max-width: 660px) {
+    .choices {
+        .container {
+            gap: 20px;
+        }
+        .card {
+            height: 50px;
+            font-size: 15px;
+        }
+    }
+}

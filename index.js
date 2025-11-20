@@ -28,6 +28,11 @@ document.querySelector(".logo").addEventListener("click", function() {
 })
 document.addEventListener("DOMContentLoaded", function() {
     console.log("DOM fully loaded and parsed!");
+    if (currentLang == undefined) {
+        select_language("en")
+        currentLang = "en"
+        localStorage.setItem("lang", 'en')
+    }
     select_language(currentLang)
     if (currentLang == "vi") {
         $("#lang").text('VN');

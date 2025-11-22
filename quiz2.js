@@ -10,7 +10,16 @@ let questionList= [
     "Khi làm việc, bạn thích điều gì?",
     "Khi bạn tưởng tượng tạo ra một thứ gì đó cho người khác dùng, bạn muốn làm gì?",
 ]
-
+let questionListEN = [
+    "Which of the following do you prefer to work with?",
+    "When you see a beautiful app or website, the first thing you usually think about is?",
+    "When using a website or app, what do you pay attention to first?",
+    "When watching tutorial videos, what type of content do you prefer?",
+    "When scrolling through social media, the type of content are you most drawn to is?",
+    "What makes you most curious?",
+    "When working, what do you enjoy doing?",
+    "When you imagine creating something for others to use, what would you like to build?",
+]
 
 let answerList = [
     ["Máy tính, trình duyệt","Điện thoại, ứng dụng","Hình ảnh, màu sắc, bố cục"],
@@ -21,6 +30,16 @@ let answerList = [
     ["Cách website hoạt động","Tính năng trên điện thoại","Những thứ mang tính thẩm mỹ"],
     ["Làm ra thứ hoạt động tốt và có logic","Làm ra thứ mà người dùng có thể chạm vào trên điện thoại","Làm ra thứ nhìn đẹp, gọn, đúng ý đồ thiết kế"],
     ["Một trang web mọi người có thể xem bằng trình duyệt","Một ứng dụng ai cũng có thể dùng trên điện thoại","Một thiết kế đẹp: banner, poster, hình minh họa"],
+]
+let answerListEN = [
+    ["Computers, browsers", "Phones, mobile applications", "Images, colors, layout "],
+    ["How did they build this website?", "How does this app run on a phone?", "This colors and layout are beautiful!"],
+    ["How it works, what happens if I click?", "Is it convenient to use on a phone?", "Are the colors, layout, images good?"],
+    ["Building a website from small steps", "Creating simple mobile apps", "Tutorials on making posters, logos, or illustrations"],
+    ["Websites, new technology trends", "Mobile apps, new smartphone features", "Visually appealing design videos, color schemes, logos, UI/UX"],
+    ["How a website functions/works", "Features on a mobile phone", "Things with aesthetic value/design"],
+    ["Creating something that works well and is logical", "Creating something a user can interact with on their phone", "Creating something that looks beautiful, clean, and fulfills the design intent"],
+    ["A website everyone can view using a browser", "An application anyone can use on their phone", "A beautiful design: banner, poster, illustration"],
 ]
 function updateProgress() {
     let progress = answer.length / questionList.length * 100;
@@ -72,9 +91,17 @@ function updateQuestion(mode) {
         document.getElementsByClassName('primary')[2].classList.remove("disabled")
     }
     setActive(answer[current], 1)
-    question.textContent = questionList[current]
+    question.innerHTML = `
+        <span lang="en"> ${questionListEN[current]} </span>
+        <span lang="vi"> ${questionList[current]} </span>
+    `
     for (i = 0; i < 3; i++) {
-        answerCard[i].textContent = answerList[current][i]
+        answerCard[i].innerHTML = `
+        <span lang="vi">${answerList[current][i]}</span>
+        <span lang="en">${answerListEN[current][i]}</span>
+    `
     }
+    select_language(currentLang)
 }
+updateQuestion()
 //Progress Bar

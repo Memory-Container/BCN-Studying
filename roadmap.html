@@ -201,7 +201,7 @@
                                         <span lang="en">Fundamental Github, git, vercel</span>
                                         <span lang="vi">Github, git, vercel Cơ bản</span>
                                     </div>
-                                    <button class="tertiary" onclick="skip()">
+                                    <button class="tertiary" id="skip" style="display: none;" onclick="skip()">
                                         <span lang="en">
                                             Skip
                                         </span>
@@ -655,6 +655,7 @@
                 document.getElementsByClassName("lock")[0].classList.add("active");
                 document.getElementsByClassName("lock")[0].textContent = "1";
                 document.getElementById("demo").style.display = "none";
+                document.getElementById("skip").style.display = "block"
                 closeOverlay()
             }
             if (flag == 1) {
